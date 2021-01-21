@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController" customModule="SLABEL" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="6cX-8S-Mtv" id="Lik-8u-tHL"/>
+                <outlet property="image" destination="iId-U0-pQg" id="5Je-s9-ytA"/>
+                <outlet property="label1" destination="GxG-fF-Mme" id="aQi-dI-FCg"/>
+                <outlet property="label2" destination="urF-wL-Pvc" id="oRg-YL-cOM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainPage2" translatesAutoresizingMaskIntoConstraints="NO" id="APt-0P-gry">
+                    <rect key="frame" x="0.0" y="44" width="414" height="245.5"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2021-01-19-22-16-55" translatesAutoresizingMaskIntoConstraints="NO" id="iId-U0-pQg">
+                    <rect key="frame" x="177" y="69" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="1k8-eF-53G"/>
+                        <constraint firstAttribute="width" constant="60" id="iTH-HN-VK6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxG-fF-Mme">
+                    <rect key="frame" x="186" y="144" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관리자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urF-wL-Pvc">
+                    <rect key="frame" x="190" y="179" width="34" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cX-8S-Mtv">
+                    <rect key="frame" x="15" y="209" width="384" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchDown" id="M0I-Fw-4gq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="urF-wL-Pvc" firstAttribute="centerX" secondItem="APt-0P-gry" secondAttribute="centerX" id="29K-r3-zNe"/>
+                <constraint firstItem="GxG-fF-Mme" firstAttribute="top" secondItem="iId-U0-pQg" secondAttribute="bottom" constant="15" id="8Na-Lj-6ib"/>
+                <constraint firstItem="APt-0P-gry" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.3" id="DOG-de-5cy"/>
+                <constraint firstItem="urF-wL-Pvc" firstAttribute="top" secondItem="iId-U0-pQg" secondAttribute="bottom" constant="50" id="Hn3-kh-thy"/>
+                <constraint firstItem="iId-U0-pQg" firstAttribute="centerX" secondItem="APt-0P-gry" secondAttribute="centerX" id="Kac-MV-hw0"/>
+                <constraint firstItem="GxG-fF-Mme" firstAttribute="centerX" secondItem="APt-0P-gry" secondAttribute="centerX" id="Pk5-N6-BcA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6cX-8S-Mtv" secondAttribute="trailing" constant="15" id="Q2o-Cz-ZBm"/>
+                <constraint firstItem="6cX-8S-Mtv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="XWs-AS-Rgv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="APt-0P-gry" secondAttribute="trailing" id="gIJ-f1-Zmb"/>
+                <constraint firstItem="iId-U0-pQg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="iOz-Xo-Jfb"/>
+                <constraint firstItem="APt-0P-gry" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kE6-VG-t9p"/>
+                <constraint firstItem="APt-0P-gry" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pUH-Dw-dil"/>
+                <constraint firstItem="6cX-8S-Mtv" firstAttribute="top" secondItem="urF-wL-Pvc" secondAttribute="bottom" constant="14" id="yrw-V2-GFm"/>
+            </constraints>
+            <point key="canvasLocation" x="13.043478260869566" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KakaoTalk_Photo_2021-01-19-22-16-55" width="120" height="120"/>
+        <image name="mainPage2" width="416" height="184"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
