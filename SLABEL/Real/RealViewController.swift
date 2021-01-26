@@ -95,6 +95,7 @@ class RealViewController: BaseViewController {
         FirebaseApp.configure()
 
         db = Firestore.firestore()
+        var distance = 0
         
         db.collection("distance").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -102,10 +103,18 @@ class RealViewController: BaseViewController {
             } else {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
+                    distance = document.document.data()["d"]
                 }
             }
+                                              
         }
-        
+        if distance > 130 {
+            cell2.backgroundColor = UIColor.lightGray
+        } else if distance >= 95 && distance <= 130 {
+            cell2.backgroundColor = UIColor.suspectColor
+        } else {
+            cell2.backgroundColor = UIColor.menuColor
+        }
         db.collection("weight").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -115,6 +124,8 @@ class RealViewController: BaseViewController {
                 }
             }
         }
+        
+        
 
     }
     
