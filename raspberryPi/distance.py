@@ -45,7 +45,7 @@ def getdistance(trig, echo):
  distance = round(distance, 2)
  return distance
 
-roll = 1
+roll = 1  #count 변수
 
 while True:
  try:
