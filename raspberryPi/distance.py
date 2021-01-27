@@ -24,12 +24,12 @@ db = firestore.client()
 
 roll = 1
 
-def dec(a):
+def dec(a):  #디코트 binary -> string
     a = a.decode()
     #a = str(a)
     return str(a)
 
-def ardread():
+def ardread():  #값 받아오는 함수 
     if ard.readable():
         LINE = ard.readline()
         distance = dec(LINE)
@@ -37,7 +37,7 @@ def ardread():
     
 while True:
     davg = 0
-    doc_ref = db.collection(u'sensor').document(str(roll))
+    doc_ref = db.collection(u'distance').document(str(roll))
 
     for i in range(0,10):
         davg += ardread()
