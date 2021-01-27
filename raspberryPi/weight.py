@@ -24,17 +24,17 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
-roll = 1
+roll = 1   #count 변수
 while True:
  try:
   wavg = 0
-  doc_ref = db.collection(u'weight').document(str(roll))
+  doc_ref = db.collection(u'weight').document(str(roll))      #db 
   
   wei = hx.get_raw_data()
   for i in wei:
    wavg += i
   weight = wavg/len(wei)
-  f_wei = int(weight/1000)
+  f_wei = int(weight/1000)   #값이 너무 커 보기 편하게 보정
   
   if f_wei > 0:
    f_wei = f_wei
