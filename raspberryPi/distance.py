@@ -50,15 +50,15 @@ roll = 1
 while True:
  try:
   davg = 0
-  doc_ref = db.collection(u'sensor').document(str(roll))
+  doc_ref = db.collection(u'distance').document(str(roll))   #db - distance(collection) -> roll(document) 에 저장
 
   for i in range(0,10):
    davg += int(getdistance(trig, echo))
 
-  distance = davg/10
+  distance = davg/10  #이상치 제거를 위해 10개 평균
   doc_ref.set({
-   u'timestamp' : str(now),
-   u'COND': int(distance)
+   u'timestamp' : str(now),    #현재시간, field
+   u'd': int(distance)
  })
   roll += 1
   doc = doc_ref.get()
@@ -72,11 +72,5 @@ while True:
   sys.exit()
 
 
- 
- 
-# except google.cloud.exceptions.NotFound:
-
-#  print(u'No such document!')
- # time.sleep(3)
 
 
